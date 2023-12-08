@@ -1,0 +1,1 @@
+import{_ as s,o as t,c,a as e}from"./index-3wZeNKQh.js";const o="/assets/2116264-lnSLn2v9.jpeg",n={},a={class:"container"},_=e("h1",{class:"text-center"},"About page",-1),r=e("p",{class:"text-center"},[e("img",{class:"img-fluid",src:o})],-1),i=[_,r];function d(l,p){return t(),c("div",a,i)}const m=s(n,[["render",d]]);export{m as default};
