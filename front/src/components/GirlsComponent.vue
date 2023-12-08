@@ -17,7 +17,6 @@
 <script>
 import axios from 'axios'
 import.meta.env.VITE_PHOTOS_URL
-//import {girls} from '../temp-data.js'
 export default {
   data(){
     return{
