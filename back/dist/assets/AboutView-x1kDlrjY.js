@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as s}from"./index-laEO-Rjk.js";const o="/assets/2116264-lnSLn2v9.jpeg",n={},_={class:"container"},a=s("h1",{class:"text-center"},"About page",-1),r=s("img",{class:"img-fluid",src:o},null,-1),i=[a,r];function l(d,f){return t(),c("div",_,i)}const p=e(n,[["render",l]]);export{p as default};

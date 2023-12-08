@@ -24,10 +24,15 @@ export default {
     }
   },
   async created(){
+    try{
     const res = await axios.get('/api/girls')
     const girls = res.data;
     console.log(girls)
     this.girls = girls;
+   } catch(err){
+    console.log(err)
+    this.girls = ['no','girls','available']
+   }
   }
 }
 
