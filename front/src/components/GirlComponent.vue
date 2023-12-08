@@ -3,7 +3,7 @@
     <div v-if="girl">
       <div class="row row-cols-1">
       <div class="card">
-        <img class="img-fluid" :src="/assets/+`${girl.pic}`"/>
+        <img class="img-fluid" :src="`${img}/${girl.pic}`"/>
         <h1 class="text-center">{{girl.name}}</h1>
       </div>
     </div>
@@ -16,12 +16,14 @@
 
 <script>
 import {girls} from '../temp-data'
+import.meta.env.VITE_PHOTOS_URL
 import axios from 'axios'
 import NotFoundPage from './NotFoundPage.vue'
 export default{
   data(){
     return{
       girl: {},
+      img: import.meta.env.VITE_PHOTOS_URL,
     }
   },
   components:{
