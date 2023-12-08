@@ -10,7 +10,7 @@ const Girl = sequelize.define('Girl',{
 	}
 })
 
-sequelize.sync().then(()=>console.log('N*Sync'))
+sequelize.sync({alter:true}).then(()=>console.log('N*Sync'))
 .catch((err)=>console.log('We R Not N*Sync'))
 
 module.exports = Girl;

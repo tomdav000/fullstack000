@@ -17,7 +17,7 @@
 <script>
 import axios from 'axios'
 import.meta.env.VITE_PHOTOS_URL
-import {girls} from '../temp-data.js'
+//import {girls} from '../temp-data.js'
 export default {
   data(){
     return{
@@ -25,8 +25,9 @@ export default {
     }
   },
   async created(){
-    this.girls = girls
-    console.log(girls)
+    const res = await axios.get('/api/girls')
+    this.girls = res.data
+    console.log(this.girls)
   }
 }
 

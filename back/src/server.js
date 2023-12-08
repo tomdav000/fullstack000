@@ -31,7 +31,7 @@ app.post('/api/girls',async(req,res)=>{
 	}
 	const girl = await Girl.create(newGirl);
 	console.log(girl)
-	res.redirect('/girls')
+	res.redirect('/api/girls')
 })
 
 app.put('/api/girls/:id',async(req,res)=>{
@@ -40,7 +40,7 @@ app.put('/api/girls/:id',async(req,res)=>{
 		girl.name = req.body.name;
 		girl.pic = req.body.pic;
 		await girl.save()
-		res.redirect('/girls')
+		res.redirect('/api/girls')
 	}
 })
 
@@ -48,7 +48,7 @@ app.delete('/api/girls/:id',async(req,res)=>{
 	const girl = await Girl.findByPk(req.params.id)
 	if(girl) {
 		girl.destroy()
-		res.redirect('/girls')
+		res.redirect('/api/girls')
 	}
 })
 
@@ -56,6 +56,6 @@ app.get('*',(req,res)=>{
 	res.sendFile(path.join(__dirname,'../dist/index.html'))
 })
 
-const PORT = process.env.PORT || 15708
+const PORT = process.env.MYSQLPORT || 15708
 
 app.listen(PORT,()=>console.log(`server is on ${PORT}`))
