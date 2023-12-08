@@ -4,7 +4,7 @@
     <div class="row row-cols-3">
       <div v-for='girl in girls' :key='girl.id'>
         <div class="card mb-2">
-        <img class="img-fluid" :src="/assets/+`${girl.pic}`"/>
+        <img class="img-fluid" :src="girl.pic"/>
         <h3 class="fs-3 text-center">{{girl.name}}</h3>
         <h6 class="fs-6 text-center">{{girl.id}}</h6>
         <button align='center'><RouterLink :to="`/girls/${girl.id}`">View Details</RouterLink></button>
@@ -17,6 +17,7 @@
 <script>
 import axios from 'axios'
 import.meta.env.VITE_PHOTOS_URL
+import {girls} from '../temp-data.js'
 export default {
   data(){
     return{
@@ -24,15 +25,8 @@ export default {
     }
   },
   async created(){
-    try{
-    const res = await axios.get('/api/girls')
-    const girls = res.data;
+    this.girls = girls
     console.log(girls)
-    this.girls = girls;
-   } catch(err){
-    console.log(err)
-    this.girls = ['no','girls','available']
-   }
   }
 }
 

@@ -1,0 +1,1 @@
+import{_ as s,o as t,c,a as e,b as o}from"./index-uziH6cUO.js";const _={},a={class:"container"},n=e("h1",{class:"text-center"},"About page",-1),r=e("img",{class:"img-fluid",src:o},null,-1),i=[n,r];function d(l,f){return t(),c("div",a,i)}const u=s(_,[["render",d]]);export{u as default};
